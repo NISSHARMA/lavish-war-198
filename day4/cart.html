@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<style>
+    #container {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 400px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+</style>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let lsdata = JSON.parse(localStorage.getItem("cart_item"))||[]
+      setcart(lsdata)
+
+
+
+    function setcart(res){
+        res.forEach(function (el,i) {
+        let item = document.createElement("div")
+
+        let image = document.createElement("img")
+        image.src = el.img
+
+        let company = document.createElement("p")
+        company.innerText = el.company
+
+        let name = document.createElement("p")
+        name.innerText = el.product
+
+        let price = document.createElement("h3")
+        price.innerText = el.price
+
+        let btn = document.createElement("button")
+        btn.innerText = "Remove"
+
+        btn.addEventListener("click", function (event) {
+            event.target.parentNode.remove();
+            removeitem(i)
+        })
+
+
+
+        item.append(image, company, name, price, btn)
+        document.getElementById("container").append(item)
+    })
+    }
+
+   
+    function removeitem(i) {
+        event.preventDefault()
+        lsdata.splice(i, 1)
+        localStorage.setItem("cart_item", JSON.stringify(lsdata))
+        setcart(lsdata)
+        window.location.reload()
+        
+    }
+</script>
