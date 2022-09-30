@@ -5,8 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit & vegetable</title>
-    <link rel="stylesheet" href="products.css">
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <style>
+        
+        #navbar {
+            height: 120px;
+            width: 85%;
+            margin: auto;
+            display: flex;
+
+        }
+
+        #navbar img {
+            margin-top: -20px;
+            width: 200px;
+        }
+
+        #navbar input {
+            width: 500px;
+            height: 25px;
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+
+        #name li {
+            display: flex;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+
+        #name {
+            display: flex;
+            width: 4000px;
+        }
+
+        #cart>p {
+            margin-left: 50px;
+        }
+
+
+
+        #menu button:nth-child(1) {
+            width: 250px;
+            height: 40px;
+            margin-left: 100px;
+            margin-top: -30px;
+            background-color: rgb(132, 194, 37);
+            border: 0px;
+            color: aliceblue;
+            font-weight: bolder;
+        }
+
+        #offer {
+            width: 80px;
+            height: 40px;
+            margin-top: -30px;
+            border: 0px;
+        }
+
+
+        #dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        #dropdown-content a {
+            color: rgb(49, 44, 44);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #menu {
+            position: relative;
+            display: flex;
+        }
+
+        #dropdown-content a:hover {
+            background-color: #ddd;
+
+        }
+
+        #menu:hover #dropdown-content {
+            display: block;
+            margin-left: 100px;
+            width: 250px;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+
+        a {
+            height: 10px;
+            font-size: medium;
+        }
+        #midimg{
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #midimg img:nth-child(1){
+            width: 100%;    
+            height: 400px;  
+
+        }
+        #midimg img:nth-child(2){
+            width: 100%;
+        }
+        #container{
+            width:90% ;
+            margin: auto;
+            height: 600px;
+            margin-top: 30px;
+            display: flex;
+        }
+        #catagory{
+            width: 20%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #catagory p:nth-child(1){
+            font-size: larger;
+            margin-top: 3px;
+            margin-left: 5px;
+            border-bottom: 2px;
+            padding: 0px;
+        }
+        #catagory p:nth-child(3){
+            color: rgb(100, 151, 24);
+        }
+        #brand{
+            width: 90%;
+            height: 20px;
+            margin: auto;
+            margin-left: 5px;
+        }
+        #abc{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            gap: 10px;
+            margin-left: 20px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+      
+      
+
+    </style>
 
    
 </head>
@@ -119,4 +268,176 @@
     
 </body>
 </html>
-<script src="product.js"></script>
+
+ <script>
+    
+
+
+
+let fruit=[
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/1201414_1-fresho-onion.jpg",
+    company:"Fresho",
+    product:"onion",
+    price:  134.98
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/40162469_6-fresho-potato-new-crop.jpg",
+    company:"Fresho",
+    product:"Potato",
+    price:  78.50
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000070_15-fresho-carrot-orange.jpg",
+    company:"Fresho",
+    product:"Carrot - Orange (Loose)",
+    price: 75.50
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000144_13-fresho-ladies-finger.jpg",
+    company:"Fresho",
+    product:"Ladies' Fingers (Loose)",
+    price:52.60,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/40089742_2-fresho-beans-haricot.jpg",
+    company:"Fresho",
+    product:"Beans - Haricot (Loose)",
+    price:25,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/1203441_1-fresho-onion-1-kg-new-potato-1-kg-tomato-hybrid-1-kg.jpg",
+    company:"Fresho",
+    product:"Onion 1 kg + New Potato 1 kg + Tomato - Hybrid  1 kg",
+    price: 86,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
+    company:"Fresho",
+    product:"Tomato - Hybrid (Loose)",
+    price: 45,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000269_31-fresho-pomegranate.jpg",
+    company:"Fresho",
+    product:"Pomegranate (Loose)",
+    price: 46,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg",
+    company:"Fresho",
+    product:"Banana - Yelakki",
+    price:  42,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+    company:"Fresho",
+    product:"Cauliflower",
+    price: 49,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg",
+    company:"Fresho",
+    product:"Mushrooms - Button",
+    price:50.02,
+    },
+    {
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg",
+    company:"Fresho",
+    product:"Capsicum - Green (Loose)",
+    price: 80,
+    },
+    {
+    
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg",
+    company:"Fresho",
+    product:"Cucumber (Loose)",
+    price:26.50,
+    },
+    
+    {    
+    img:"https://www.bigbasket.com/media/uploads/p/s/40134281_13-fresho-baby-apple-shimla.jpg",
+    company:"Fresho",
+    product:"Baby Apple Shimla",
+    price: 112,
+    },
+    
+    {    
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg",
+    company:"Fresho",
+    product:"Coriander Leaves",
+    price: 31,
+    },
+    
+    {    
+    img:"https://www.bigbasket.com/media/uploads/p/s/40022638_4-fresho-tomato-local-organically-grown.jpg",
+    company:"Fresho",
+    product:"Tomato - Local, Organically Grown (Loose)",
+    price: 26.40,
+    },
+    
+    {
+    
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000027_28-fresho-banana-robusta.jpg",
+    company:"Fresho",
+    product:"Banana - Robusta",
+    price:16.50,
+    },
+    
+    {
+    
+    img:"https://www.bigbasket.com/media/uploads/p/s/10000127_17-fresho-lemon.jpg",
+    company:"Fresho",
+    product:"Lemon (Loose)",
+    price:48.75
+    },
+    
+    {
+    
+    img:"https://www.bigbasket.com/media/uploads/p/s/1203678_1-fresho-tender-coconut-medium.jpg",
+    company:"Fresho",
+    product:"Tender Coconut - Medium",
+    price:180
+    }
+]
+
+let cart=JSON.parse(localStorage.getItem("cartitem"))||[]
+  
+fruit.forEach(function(el){
+    let product=document.createElement("div")
+
+    let image=document.createElement("img")
+    image.src=el.img
+    product.append(image)
+
+    let company=document.createElement("p")
+    company.innerText=el.company
+    product.append(company)
+
+    let pro=document.createElement("p")
+    pro.innerText=el.product
+    product.append(pro)
+
+    let price=document.createElement("h4")
+    price.innerText=el.price
+    product.append(price)
+
+    let btn=document.createElement("button")
+    btn.innerText="Add To Cart"
+    product.append(btn)
+    btn.addEventListener("click", function(){
+        addtocart(el)
+    })
+
+    document.getElementById("abc").append(product)
+
+})
+
+ function addtocart(el){
+ 
+  cart.push(el)
+  localStorage.setItem("cart_item",JSON.stringify(cart))
+   
+ }   
+    
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 30%;
+            height: 500px;
+            margin: auto;
+            margin-top: 50px;
+            justify-content: center;
+        }
+       
+        img{
+            width: 120px;
+        }
+      
+        #container>div{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            margin-top:-10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        button{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img"> <img src="data:image/png;base64,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" alt=""></div>
+        <div><h2>Sign Up</h2></div>
+        <p>Email</p>
+        <div><input id="email" type="text"  placeholder="Enter your email adress" name="email" required></div>
+
+        <p id="phone1">phone</p>
+        <div><input id="phone" type="number"  placeholder="Enter your phone no" required></div>
+        
+        <p >Password</p>
+        <div><input id="pass" type="text"  placeholder="Enter your password" required></div>
+
+        <div> <h3 id="login"></h3>
+        </div>               
+        <div> <button id="signup">Signup</button></div> 
+                      
+    </div>
+
+</body>
+</html>
+
+<script>
+   document.getElementById("signup").addEventListener("click",getdata)
+
+function getdata(event){
+let email=document.getElementById("email").value
+let phone=document.getElementById("phone").value
+let pass=document.getElementById("pass").value
+
+localStorage.setItem("email", email)
+localStorage.setItem("phone", phone)
+localStorage.setItem("password", pass)
+
+let td9=document.createElement("h3")
+td9.innerText="Login"
+td9.style.color="red"
+td9.style.cursor="pointer"
+document.querySelector("#login").append(td9)
+
+
+let rem=document.getElementById("phone")
+let rem1=document.getElementById("phone1")
+let rem2=document.getElementById("signup")
+rem.remove()
+rem1.remove()
+rem2.remove()
+
+document.getElementById("email").value=""
+document.getElementById("pass").value=""
+
+document.getElementById("login").addEventListener("click",mylogin)
+
+
+function mylogin(event){
+let mail=document.getElementById("email").value
+let password=document.getElementById("pass").value
+
+let mail1=localStorage.getItem("email")
+let password2=localStorage.getItem("password")
+
+if(mail==mail1 && password==password2){
+    alert("Login Sucessful")
+}else{
+   alert("Wrong email or password")
+}
+
+}
+
+}
+
+</script>
