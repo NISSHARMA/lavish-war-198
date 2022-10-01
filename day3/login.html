@@ -59,10 +59,16 @@
 <script>
    document.getElementById("signup").addEventListener("click",getdata)
 
-function getdata(event){
-let email=document.getElementById("email").value
+   function getdata(event){
+
+   let email=document.getElementById("email").value
 let phone=document.getElementById("phone").value
 let pass=document.getElementById("pass").value
+
+if(email=="" || phone==""||pass=="" ){
+    alert("Please fill all the details")
+}else{
+    
 
 localStorage.setItem("email", email)
 localStorage.setItem("phone", phone)
@@ -96,13 +102,12 @@ let mail1=localStorage.getItem("email")
 let password2=localStorage.getItem("password")
 
 if(mail==mail1 && password==password2){
-    alert("Login Sucessful")
+   
+    window.location.replace("file:///C:/Users/Home/Desktop/construct%20week/lavish-war-198/day3/landingpage.html");
 }else{
    alert("Wrong email or password")
 }
-
 }
-
+}    
 }
-
 </script>

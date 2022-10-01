@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,6 @@
     <title>Fruit & vegetable</title>
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <style>
-        
         #navbar {
             height: 120px;
             width: 85%;
@@ -104,61 +104,78 @@
             height: 10px;
             font-size: medium;
         }
-        #midimg{
+
+        #midimg {
             width: 90%;
             margin: auto;
             margin-top: 20px;
         }
-        #midimg img:nth-child(1){
-            width: 100%;    
-            height: 400px;  
+
+        #midimg img:nth-child(1) {
+            width: 100%;
+            height: 400px;
 
         }
-        #midimg img:nth-child(2){
+
+        #midimg img:nth-child(2) {
             width: 100%;
         }
-        #container{
-            width:90% ;
+
+        #container {
+            width: 90%;
             margin: auto;
-            height: 600px;
+            
             margin-top: 30px;
             display: flex;
         }
-        #catagory{
+
+        #catagory {
             width: 20%;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         }
-        #catagory p:nth-child(1){
+
+        #catagory p:nth-child(1) {
             font-size: larger;
             margin-top: 3px;
             margin-left: 5px;
             border-bottom: 2px;
             padding: 0px;
         }
-        #catagory p:nth-child(3){
+
+        #catagory p:nth-child(3) {
             color: rgb(100, 151, 24);
         }
-        #brand{
+
+        #brand {
             width: 90%;
             height: 20px;
             margin: auto;
             margin-left: 5px;
         }
-        #abc{
+
+        #abc {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(5,1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             gap: 10px;
             margin-left: 20px;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         }
-      
-      
+        #abc div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
+        }
+        #catagory p{
+            font-weight: bold;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        select{
+            height: 30px;
+            width: 100%;
+        }
     </style>
 
-   
+
 </head>
+
 <body>
     <div id="navbar">
         <div><img
@@ -168,10 +185,10 @@
         <div id="input"><input type="text" placeholder="Search for products..."> </div>
         <div id="name">
             <li><i class="fa-light fa-phone"></i>1860 123 1000</li>
-            <li>banglore</li>
+            <li> 56004,banglore</li>
             <div id="cart">
-                <li>Login/sign up</li>
-                <p id="mybascket"> <i class="fa-solid fa-cart-shopping"></i> <a href="cart.html" target="_blank">My Basket</a> </p>
+                <li> <a href="login.html">Login/sign up</a> </li>
+                <p id="mybascket"> <i class="fa-solid fa-cart-shopping"></i> <a href="cart.html" target="_blank"> My Basket</a></p>
             </div>
         </div>
     </div>
@@ -182,7 +199,7 @@
         <button>SHOP BY CATAGORY <span>></span> </button>
         <div id="dropdown-content">
             <a href="">Fruits and Vegitable</a>
-            <a href="">Foodgrains oil and masala</a>
+            <a href="foodgrain.html">Foodgrains oil and masala</a>
             <a href="">Bakery Cakes & Dairy</a>
             <a href="">Beverages</a>
             <a href="">Snacks & branded food</a>
@@ -195,249 +212,356 @@
         </div>
 
         <button id="offer">OFFERS</button>
-        
+
 
     </div>
 
     <div id="midimg">
         <img src="https://www.bigbasket.com/media/uploads/banner_images/L1-YXNP3540-1200X300-20thJun22.jpg" alt="">
-    <img src="https://www.bigbasket.com/media/uploads/flatpages/test-1/Fruits%20&%20vegetables.jpg" alt="">
+        <img src="https://www.bigbasket.com/media/uploads/flatpages/test-1/Fruits%20&%20vegetables.jpg" alt="">
     </div>
 
     <div id="container">
         <div id="catagory">
             <p>catagory</p>
             <hr>
-        
+
             <p>Fruits & Vegetables</p>
             <hr>
             <p>Brand</p>
             <hr>
             <input id="brand" type="text" placeholder="Search by Brand">
-         <input type="checkbox" id="checkbox1">
-         <label for="checkbox1">bb Combo</label><br>
 
-         <input type="checkbox" id="checkbox2">
-         <label for="checkbox2">Brotos</label><br>
+            <input type="checkbox" id="checkbox1" onclick="filter()">
+            <label for="checkbox1" class="checkbox">bb Combo</label><br>
 
-         <input type="checkbox" id="checkbox3">
-         <label for="checkbox3">Fresho</label><br>
 
-         <input type="checkbox" id="checkbox4">
-         <label for="checkbox4">Gopalan Organic</label><br>
+            <input type="checkbox" id="checkbox2" onclick="filter2()">
+            <label for="checkbox2" class="checkbox">Brotos</label><br>
 
-         <input type="checkbox" id="checkbox5">
-         <label for="checkbox5">Hoovu Fresh</label><br>
+            <input type="checkbox" id="checkbox3" onclick="filter3()">
+            <label for="checkbox3" class="checkbox">Fresho</label><br>
 
-         <input type="checkbox" id="checkbox6">
-         <label for="checkbox6">Organic</label><br>
+            <input type="checkbox" id="checkbox4" onclick="filter4()">
+            <label for="checkbox4" class="checkbox">Gopalan Organic</label><br>
 
-         <input type="checkbox" id="checkbox7">
-         <label for="checkbox7">Tadaa</label><br>
-         <hr>
+            <input type="checkbox" id="checkbox5" onclick="filter5()">
+            <label for="checkbox5" class="checkbox">Hoovu Fresh</label><br>
 
-         <p>Price</p>
+            <input type="checkbox" id="checkbox6" onclick="filter6()">
+            <label for="checkbox6" class="checkbox">Organic</label><br>
 
-         
-         <input type="checkbox" id="checkbox8">
-         <label for="checkbox8">Less than Rs 20 </label><br>
+            <input type="checkbox" id="checkbox7" onclick="filter7()">
+            <label for="checkbox7" class="checkbox">show all</label><br>
+            <hr>
 
-         <input type="checkbox" id="checkbox9">
-         <label for="checkbox9">Rs 21 to Rs 50 </label><br>
 
-         <input type="checkbox" id="checkbox10">
-         <label for="checkbox10">Rs 51 to Rs 100 </label><br>
 
-         <input type="checkbox" id="checkbox11">
-         <label for="checkbox11">Rs 101 to Rs 200 </label><br>
 
-         <input type="checkbox" id="checkbox12">
-         <label for="checkbox12">Rs 201 to Rs 500 </label><br>
 
-         <input type="checkbox" id="checkbox13">
-         <label for="checkbox13">More than Rs 501 </label><br>
+
+            <p>Sort By Price</p>
+            <Select id="sort" onchange="sort()">
+                <option value="Choose">Choose</option>
+                <option value="Low to high">Low to high</option>
+                <option value="High to Low">High to Low</option>
+            </Select>
 
 
         </div>
-        
-        <div id="abc"></div>
-        
-        
 
+        <div id="abc">
+            <h3>Fruits & Vegitable</h3>
+        </div>
     </div>
-    
+
+    <div style="width: 85%; margin: auto; color: rgb(112, 106, 106);">
+        <h2>Buy Fruits and Vegetables Online</h2>
+        <p>While fresh vegetables should be a part of your everyday meals, some vegetables are hard to find even in the huge supermarkets in your area. However, the luxury of online shopping offers customers the comfort of relishing these veggies by ordering them from the comfort of their home. While beetroot, amlas, green peas, broccoli can easily be found in the market, bigbasket makes grocery shopping easier for you with their fresh produce delivered in top class packages right at your doorstep. With their wide delivery network, geographical barriers are easily overcome in more than 25 major cities, thereby giving you the benefit of fresh fruits and vegetables every time.</p>
+    <p>Fruits and Vegetables <br>
+        Fruits and vegetables form the base of everybody’s daily food consumption. However, not everyone has access to fresh and healthy vegetables and fruits due to various reasons. Starting from farming methods that involve toxicants to storage systems and logistics, many sellers land up with rotten raw foods or foods exposed to chemicals and other radicals. Bigbasket has now turned the scene around with its online shopping store, where you can have fresh potato, tomato, carrots, onions and everything else on your grocery list, delivered to your doorstep, even without stepping out of your house. Apart from your regular local produce, you can also shop for other seasonal produces such as asparagus, broccoli, drumstick, white onion and more on bigbasket’s online store. Packaging plays a vital role in up keeping the freshness of your fruits and vegetables. Green leafy vegetables are prone to spoilage easily if not handled properly. While ordering online in bigbasket, worries about packaging and hygiene can be kept at bay. Be it your lettuce, cauliflower or any green vegetable, the packaging standard is specific and of high quality. You can find a whole wide range of vegetables such as red cabbage, drumstick leaves and different exotic ones as well on bigbasket. Apart from quality, we also believe in making fresh foods available to all and thus, you can find very nominal pricing while shopping online with us. Comapre the onion price or potato price with anywhere else in the market, and you will understand what we are talking about. Quality is uncompromised regardless of the type of delivery that you choose, standard or express. The produce delivered to you will be as fresh as directly cultivated from the farms resulting in high levels of nutrition. You no more have to walk through aisles of piled up produce and spend time carefully picking out each vegetable or fruit from them. We will take care of the entire process for you. We at bigbasket, cautiously pick your produce, meticulously clean them and pack them using the best packaging material available before delivering them to you. Shop for your vegetables and fruits online now from the comfort of your couch and have your order delivered to your doorstep within a stipulated time. Look out for great deals, offers and value packs while shopping online with us. Save time, money and efforts, by completing your routine grocery shopping on bigbasket.</p>
+    <p>Freshness- the promise of quality <br>
+        The freshness of the produce being delivered to you is unquestionable, even in the case of standard delivery. Veggies like banana stem and banana flower, which are used in exotic dishes, are fresh and readily available to buy online at bigbasket. Vegetables like mushrooms and sprouts, which are prone to quick spoilage are also packed with utmost care using the best materials. Variety of vegetables such as button mushrooms, raw banana and yellow zucchini are also available. With the demand for organic produce continuously rising, bigbasket has made them readily accessible. You can shop for organic bananas online on the site too. All these fruits and vegitables are brought from verified and reputed vendors, giving no room to worry about quality. Striving to sustain the nutritive benefits of the vegetables and fruits, bigbasket takes its packaging very seriously and abides by a very strict packing standard. With a whole lot of groceries to shop for and the luxury of at-home shopping, bigbasket brings convenience to your grocery shopping experience with regard to time, delivery, cost and quality. bigbasket offers a range of prominent products that are well received by customers. “Zespri” is one such well-known brand that is available to shop for online. For those looking out for organic products only, bigbasket stocks products by TVS Organic too. Make bigbasket your prime choice to buy fruits and vegetables online.</p>
+    </div>
+
 </body>
+
 </html>
 
- <script>
-    
+<script>
 
 
 
-let fruit=[
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/1201414_1-fresho-onion.jpg",
-    company:"Fresho",
-    product:"onion",
-    price:  134.98
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/40162469_6-fresho-potato-new-crop.jpg",
-    company:"Fresho",
-    product:"Potato",
-    price:  78.50
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000070_15-fresho-carrot-orange.jpg",
-    company:"Fresho",
-    product:"Carrot - Orange (Loose)",
-    price: 75.50
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000144_13-fresho-ladies-finger.jpg",
-    company:"Fresho",
-    product:"Ladies' Fingers (Loose)",
-    price:52.60,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/40089742_2-fresho-beans-haricot.jpg",
-    company:"Fresho",
-    product:"Beans - Haricot (Loose)",
-    price:25,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/1203441_1-fresho-onion-1-kg-new-potato-1-kg-tomato-hybrid-1-kg.jpg",
-    company:"Fresho",
-    product:"Onion 1 kg + New Potato 1 kg + Tomato - Hybrid  1 kg",
-    price: 86,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
-    company:"Fresho",
-    product:"Tomato - Hybrid (Loose)",
-    price: 45,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000269_31-fresho-pomegranate.jpg",
-    company:"Fresho",
-    product:"Pomegranate (Loose)",
-    price: 46,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg",
-    company:"Fresho",
-    product:"Banana - Yelakki",
-    price:  42,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
-    company:"Fresho",
-    product:"Cauliflower",
-    price: 49,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg",
-    company:"Fresho",
-    product:"Mushrooms - Button",
-    price:50.02,
-    },
-    {
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg",
-    company:"Fresho",
-    product:"Capsicum - Green (Loose)",
-    price: 80,
-    },
-    {
+
+    let fruit = [
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/1201414_1-fresho-onion.jpg",
+            company: "Organic",
+            product: "onion",
+            price: 134.98
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/40162469_6-fresho-potato-new-crop.jpg",
+            company: "Gopalan Organic",
+            product: "Potato",
+            price: 78.50
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000070_15-fresho-carrot-orange.jpg",
+            company: "Tadaa",
+            product: "Carrot - Orange (Loose)",
+            price: 75.50
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000144_13-fresho-ladies-finger.jpg",
+            company: "Gopalan Organic",
+            product: "Ladies' Fingers (Loose)",
+            price: 52.60,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/40089742_2-fresho-beans-haricot.jpg",
+            company: "Fresho",
+            product: "Beans - Haricot (Loose)",
+            price: 25,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/1203441_1-fresho-onion-1-kg-new-potato-1-kg-tomato-hybrid-1-kg.jpg",
+            company: "Tadaa",
+            product: "Onion 1 kg + New Potato 1 kg + Tomato - Hybrid  1 kg",
+            price: 86,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
+            company: "Tadaa",
+            product: "Tomato - Hybrid (Loose)",
+            price: 45,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000269_31-fresho-pomegranate.jpg",
+            company: "Fresho",
+            product: "Pomegranate (Loose)",
+            price: 46,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg",
+            company: "Fresho",
+            product: "Banana - Yelakki",
+            price: 42,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+            company: "Brotos",
+            product: "Cauliflower",
+            price: 49,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg",
+            company: "Organic",
+            product: "Mushrooms - Button",
+            price: 50.02,
+        },
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg",
+            company: "Hoovu Fresh",
+            product: "Capsicum - Green (Loose)",
+            price: 80,
+        },
+        {
+
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg",
+            company: "Gopalan Organic",
+            product: "Cucumber (Loose)",
+            price: 26.50,
+        },
+
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/40134281_13-fresho-baby-apple-shimla.jpg",
+            company: "Fresho",
+            product: "Baby Apple Shimla",
+            price: 112,
+        },
+
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg",
+            company: "Fresho",
+            product: "Coriander Leaves",
+            price: 31,
+        },
+
+        {
+            img: "https://www.bigbasket.com/media/uploads/p/s/40022638_4-fresho-tomato-local-organically-grown.jpg",
+            company: "Fresho",
+            product: "Tomato - Local, Organically Grown (Loose)",
+            price: 26.40,
+        },
+
+        {
+
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000027_28-fresho-banana-robusta.jpg",
+            company: "Fresho",
+            product: "Banana - Robusta",
+            price: 16.50,
+        },
+
+        {
+
+            img: "https://www.bigbasket.com/media/uploads/p/s/10000127_17-fresho-lemon.jpg",
+            company: "Fresho",
+            product: "Lemon (Loose)",
+            price: 48.75
+        },
+
+        {
+
+            img: "https://www.bigbasket.com/media/uploads/p/s/1203678_1-fresho-tender-coconut-medium.jpg",
+            company: "bb combo",
+            product: "Tender Coconut - Medium",
+            price: 180
+        }
+    ]
+
+    let cart = []
     
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg",
-    company:"Fresho",
-    product:"Cucumber (Loose)",
-    price:26.50,
-    },
     
-    {    
-    img:"https://www.bigbasket.com/media/uploads/p/s/40134281_13-fresho-baby-apple-shimla.jpg",
-    company:"Fresho",
-    product:"Baby Apple Shimla",
-    price: 112,
-    },
-    
-    {    
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg",
-    company:"Fresho",
-    product:"Coriander Leaves",
-    price: 31,
-    },
-    
-    {    
-    img:"https://www.bigbasket.com/media/uploads/p/s/40022638_4-fresho-tomato-local-organically-grown.jpg",
-    company:"Fresho",
-    product:"Tomato - Local, Organically Grown (Loose)",
-    price: 26.40,
-    },
-    
-    {
-    
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000027_28-fresho-banana-robusta.jpg",
-    company:"Fresho",
-    product:"Banana - Robusta",
-    price:16.50,
-    },
-    
-    {
-    
-    img:"https://www.bigbasket.com/media/uploads/p/s/10000127_17-fresho-lemon.jpg",
-    company:"Fresho",
-    product:"Lemon (Loose)",
-    price:48.75
-    },
-    
-    {
-    
-    img:"https://www.bigbasket.com/media/uploads/p/s/1203678_1-fresho-tender-coconut-medium.jpg",
-    company:"Fresho",
-    product:"Tender Coconut - Medium",
-    price:180
+    display(fruit)
+
+    //Display products
+    function display(res) {
+        document.getElementById("abc").innerHTML = ""
+
+        res.forEach(function (el) {
+            let product = document.createElement("div")
+
+            let image = document.createElement("img")
+            image.src = el.img
+            product.append(image)
+
+            let company = document.createElement("p")
+            company.innerText = el.company
+            product.append(company)
+
+            let pro = document.createElement("p")
+            pro.innerText = el.product
+            product.append(pro)
+
+            let price = document.createElement("h4")
+            price.innerText = "Price Rs"+" "+ el.price
+            product.append(price)
+
+            let btn = document.createElement("button")
+            btn.innerText = "Add To Cart"
+            product.append(btn)
+            btn.addEventListener("click", function () {
+                addtocart(el)
+            })
+
+            document.getElementById("abc").append(product)
+
+        })
+
+
     }
-]
 
-let cart=JSON.parse(localStorage.getItem("cartitem"))||[]
-  
-fruit.forEach(function(el){
-    let product=document.createElement("div")
+    //add to cart
+    function addtocart(el) {
+        cart.push(el)
+       
+        localStorage.setItem("cart_item", JSON.stringify(cart))
+      
+    }
 
-    let image=document.createElement("img")
-    image.src=el.img
-    product.append(image)
 
-    let company=document.createElement("p")
-    company.innerText=el.company
-    product.append(company)
+    //Sort by price
+    function sort(a, b) {
+        let selected = document.querySelector("#sort").value
+        if (selected == "Low to high") {
+            fruit.sort(function (a, b) {
+                return a.price - b.price
+            })
+            display(fruit)
+        }
 
-    let pro=document.createElement("p")
-    pro.innerText=el.product
-    product.append(pro)
+        if (selected == "High to Low") {
+            fruit.sort(function (a, b) {
+                return b.price - a.price
+            })
+            display(fruit)
+        }
+        if (selected == "Choose") {
+            window.location.reload();
+        }
+    }
 
-    let price=document.createElement("h4")
-    price.innerText=el.price
-    product.append(price)
 
-    let btn=document.createElement("button")
-    btn.innerText="Add To Cart"
-    product.append(btn)
-    btn.addEventListener("click", function(){
-        addtocart(el)
-    })
 
-    document.getElementById("abc").append(product)
+    //Filter product
 
-})
+    function filter() {
+        let res = fruit.filter(function (el) {
+            return el.company == "bb combo"
+        })
+        display(res)
 
- function addtocart(el){
- 
-  cart.push(el)
-  localStorage.setItem("cart_item",JSON.stringify(cart))
-   
- }   
+    }
+
+
+    function filter2() {
+        let res = fruit.filter(function (el) {
+            return el.company == "Brotos"
+        })
+        display(res)
+
+    }
+
+
+    function filter4() {
+        let res = fruit.filter(function (el) {
+            return el.company == "Gopalan Organic"
+        })
+        display(res)
+
+    }
+
+    function filter3() {
+        let res = fruit.filter(function (el) {
+            return el.company == "Fresho"
+        })
+        display(res)
+
+    }
+
+
+    function filter5() {
+        let res = fruit.filter(function (el) {
+            return el.company == "Hoovu Fresh"
+        })
+        display(res)
+
+    }
+
+
     
+
+
+    function filter6() {
+        let res = fruit.filter(function (el) {
+            return el.company == "Organic"
+        })
+        display(res)
+
+    }
+
+
+    function filter7() {
+        
+        
+       window.location.reload()
+
+    }
+
+
+
+
+
+
 </script>
