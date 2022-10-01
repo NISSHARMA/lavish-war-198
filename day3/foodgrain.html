@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,35 @@
     <title>Foodgrains</title>
 
     <style>
-        
         #navbar {
             height: 120px;
             width: 85%;
             margin: auto;
             display: flex;
-
         }
-
         #navbar img {
             margin-top: -20px;
             width: 200px;
         }
-
         #navbar input {
             width: 500px;
             height: 25px;
             margin-top: 50px;
             margin-left: 10px;
         }
-
         #name li {
             display: flex;
             margin-left: 50px;
             margin-top: 15px;
         }
-
         #name {
             display: flex;
             width: 4000px;
+            
         }
-
         #cart>p {
             margin-left: 50px;
         }
-
-
-
         #menu button:nth-child(1) {
             width: 250px;
             height: 40px;
@@ -62,8 +54,6 @@
             margin-top: -30px;
             border: 0px;
         }
-
-
         #dropdown-content {
             display: none;
             position: absolute;
@@ -72,24 +62,20 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-
         #dropdown-content a {
             color: rgb(49, 44, 44);
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-
         #menu {
             position: relative;
             display: flex;
         }
-
         #dropdown-content a:hover {
             background-color: #ddd;
 
         }
-
         #menu:hover #dropdown-content {
             display: block;
             margin-left: 100px;
@@ -104,308 +90,420 @@
             height: 10px;
             font-size: medium;
         }
-        #midimg{
+
+        #midimg {
             width: 90%;
             margin: auto;
             margin-top: 20px;
         }
-        #midimg img:nth-child(1){
-            width: 100%;    
-            height: 400px;  
+
+        #midimg img:nth-child(1) {
+            width: 100%;
+            height: 400px;
 
         }
-        #midimg img:nth-child(2){
+
+        #midimg img:nth-child(2) {
             width: 100%;
         }
-        #container{
-            width:90% ;
+
+        #container {
+            width: 90%;
             margin: auto;
-            height: 600px;
             margin-top: 30px;
             display: flex;
         }
-        #catagory{
+
+        #catagory {
             width: 20%;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         }
-        #catagory p:nth-child(1){
+
+        #catagory p:nth-child(1) {
             font-size: larger;
             margin-top: 3px;
             margin-left: 5px;
             border-bottom: 2px;
             padding: 0px;
         }
-        #catagory p:nth-child(3){
+
+        #catagory p:nth-child(3) {
             color: rgb(100, 151, 24);
         }
-        #brand{
+
+        #brand {
             width: 90%;
             height: 20px;
             margin: auto;
             margin-left: 5px;
         }
-        #abc{
+
+        #abc {
             display: grid;
             width: 80%;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows:350px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 350px;
             gap: 10px;
             margin-left: 20px;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         }
-      
-      
+        #abc div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
+        }
+        #catagory p{
+            font-weight: bold;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        select{
+            height: 30px;
+            width: 100%;
+        }
     </style>
 
-    
+
 </head>
+
 <body>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit & vegetable</title>
-    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <html lang="en">
 
-   
-</head>
-<body>
-    <div id="navbar">
-        <div><img
-                src="data:image/png;base64,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"
-                alt="">
-        </div>
-        <div id="input"><input type="text" placeholder="Search for products..."> </div>
-        <div id="name">
-            <li><i class="fa-light fa-phone"></i>1860 123 1000</li>
-            <li>banglore</li>
-            <div id="cart">
-                <li>Login/sign up</li>
-                <p id="mybascket"> <i class="fa-solid fa-cart-shopping"></i> <a href="cart.html" target="_blank">My Basket</a> </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fruit & vegetable</title>
+        <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+
+
+    </head>
+
+    <body>
+        <div id="navbar">
+            <div><img
+                    src="data:image/png;base64,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"
+                    alt="">
+            </div>
+            <div id="input"><input type="text" placeholder="Search for products..."> </div>
+            <div id="name">
+                <li><i class="fa-light fa-phone"></i>1860 123 1000</li>
+                <li> banglore</li>
+                <div id="cart">
+                    <li>  <a href="login.html">Login/sign up</a> </li>
+                    <p id="mybascket"> <i class="fa-solid fa-cart-shopping"></i> <a href="cart.html" target="_blank">My
+                            Basket</a> </p>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-
-
-    <div id="menu">
-        <button>SHOP BY CATAGORY <span>></span> </button>
-        <div id="dropdown-content">
-            <a href="">Fruits and Vegitable</a>
-            <a href="">Foodgrains oil and masala</a>
-            <a href="">Bakery Cakes & Dairy</a>
-            <a href="">Beverages</a>
-            <a href="">Snacks & branded food</a>
-            <a href="">Cleaning & household</a>
-            <a href="">Kitchen garden & pets</a>
-            <a href="">Eggs meats & fish</a>
-            <a href="">Grourmet & world food</a>
-            <a href="">Baby care</a>
-            <a href="">View all</a>
         </div>
 
-        <button id="offer">OFFERS</button>
-        
 
-    </div>
+        <div id="menu">
+            <button>SHOP BY CATAGORY <span>></span> </button>
+            <div id="dropdown-content">
+                <a href="Products.html">Fruits and Vegitable</a>
+                <a href="">Foodgrains oil and masala</a>
+                <a href="">Bakery Cakes & Dairy</a>
+                <a href="">Beverages</a>
+                <a href="">Snacks & branded food</a>
+                <a href="">Cleaning & household</a>
+                <a href="">Kitchen garden & pets</a>
+                <a href="">Eggs meats & fish</a>
+                <a href="">Grourmet & world food</a>
+                <a href="">Baby care</a>
+                <a href="">View all</a>
+            </div>
 
-    <div id="midimg">
-        <img src="https://www.bigbasket.com/media/uploads/banner_images/YXPL14771_YXPL14773_YXPL14774_YXPL14781_YXPL14795_300_240922.jpg" alt="">
-    
-    </div>
-
-    <div id="container">
-        <div id="catagory">
-            <p>catagory</p>
-            <hr>
-        
-            <p>Foodgrains</p>
-            <hr>
-            <p>Brand</p>
-            <hr>
-            <input id="brand" type="text" placeholder="Search by Brand">
-         <input type="checkbox" id="checkbox1">
-         <label for="checkbox1">bb Combo</label><br>
-
-         <input type="checkbox" id="checkbox2">
-         <label for="checkbox2">Brotos</label><br>
-
-         <input type="checkbox" id="checkbox3">
-         <label for="checkbox3">Fresho</label><br>
-
-         <input type="checkbox" id="checkbox4">
-         <label for="checkbox4">Gopalan Organic</label><br>
-
-         <input type="checkbox" id="checkbox5">
-         <label for="checkbox5">Hoovu Fresh</label><br>
-
-         <input type="checkbox" id="checkbox6">
-         <label for="checkbox6">Organic</label><br>
-
-         <input type="checkbox" id="checkbox7">
-         <label for="checkbox7">Tadaa</label><br>
-         <hr>
-
-         <p>Price</p>
-
-         
-         <input type="checkbox" id="checkbox8">
-         <label for="checkbox8">Less than Rs 20 </label><br>
-
-         <input type="checkbox" id="checkbox9">
-         <label for="checkbox9">Rs 21 to Rs 50 </label><br>
-
-         <input type="checkbox" id="checkbox10">
-         <label for="checkbox10">Rs 51 to Rs 100 </label><br>
-
-         <input type="checkbox" id="checkbox11">
-         <label for="checkbox11">Rs 101 to Rs 200 </label><br>
-
-         <input type="checkbox" id="checkbox12">
-         <label for="checkbox12">Rs 201 to Rs 500 </label><br>
-
-         <input type="checkbox" id="checkbox13">
-         <label for="checkbox13">More than Rs 501 </label><br>
+            <button id="offer">OFFERS</button>
 
 
         </div>
-        
-        <div id="abc"></div>
-        
-        
 
-    </div>
-    
-</body>
-</html>
+        <div id="midimg">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/YXPL14771_YXPL14773_YXPL14774_YXPL14781_YXPL14795_300_240922.jpg"
+                alt="">
 
-<script>
-    
-let foodgrain=[
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/274120_4-sunpure-refined-sunflower-oil.jpg",
-        company:"Aashirvaad",
-        product:"Atta/Godihittu - Whole Wheat",
-        price:463
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/10000404_18-bb-royal-rice-raw-sona-masoori-12-17-months-old.jpg",
-        company:"BB Royal",
-        product:"Rice/Akki - Raw, Sona Masoori, 12-17 Months Old",
-        price:539
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/30005417_8-bb-popular-sugar.jpg",
-        company:"BB Popular",
-        product:"Sugar/Sakkare",
-        price:226
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/40030808_10-bb-royal-cuminjeera-whole.jpg",
-        company:"BB Royal",
-        product:"Cumin/Jeera/Jeerige - Whole",
-        price:353
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/40075897_12-bb-royal-sona-masoori-rice-raw-rice-super-premium.jpg",
-        company:"BB Royal",
-        product:"Sona Masoori Rice/Akki Raw Rice/Akki - Super Premium",
-        price:575
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/213273_7-nandini-pure-ghee.jpg",
-        company:"Nandini",
-        product:"Pure Ghee/Tuppa",
-        price:570
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/1204455_2-fortune-sunflower-refined-oil-sun-lite.jpg",
-        company:"Fortune",
-        product:"Sunflower Refined Oil - Sun Lite",
-        price:459
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/274120_4-sunpure-refined-sunflower-oil.jpg",
-        company:"Sunpure",
-        product:"Refined - Sunflower Oil",
-        price:156
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/40072494_12-bb-royal-organic-turtoor-dal.jpg",
-        company:"BB Royal",
-        product:"Organic - Toor Dal/Togari Bele",
-        price:155
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/60000007_5-bb-popular-moong-dal.jpg",
-        company:"BB Royal",
-        product:"Moong Dal/Hesaru Bele",
-        price:56.50
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/10000407_12-bb-royal-refined-sugar-sulphurless.jpg",
-        company:"BB Royal",
-        product:"Refined Sugar (Sulphurless)/Sakkare",
-        price:239
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/40000291_8-tata-sampann-unpolished-toor-dalarhar-dal.jpg",
-        company:"Tata Sampann",
-        product:"Toor Dal/Togari Bele",
-        price:150
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg",
-        company:"Tata Salt",
-        product:"Iodized",
-        price:142
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/30010377_11-bb-popular-urad-dal-split.jpg",
-        company:"BB Popular",
-        product:"Urad Dal/Uddina Bele - Split",
-        price:55.50
-    },
-    {
-        image:"https://www.bigbasket.com/media/uploads/p/s/10000431_18-bb-royal-pohaavalakkiavalchivda-thick.jpg",
-        company:"BB Royal",
-        product:"Poha/Avalakki/Aval/Chivda Thick - Flattened & Beaten Rice , Makers Breakfast &  Teatime Snacks",
-        price:60.82
-    },
-]
+        </div>
+
+        <div id="container">
+            <div id="catagory">
+                <p>catagory</p>
+                <hr>
+
+                <p>Foodgrains</p>
+                <hr>
+                <p>Brand</p>
+                <hr>
+                <input id="brand" type="text" placeholder="Search by Brand">
+                <input type="checkbox" id="checkbox1" onClick="filter()">
+                <label for="checkbox1">BB Royal</label><br>
+
+                <input type="checkbox" id="checkbox2" onClick="filter1()">
+                <label for="checkbox2">Nandini</label><br>
+
+                <input type="checkbox" id="checkbox3" onClick="filter2()">
+                <label for="checkbox3">Aashirvaad</label><br>
+
+                <input type="checkbox" id="checkbox4" onclick="filter3()">
+                <label for="checkbox4">Fortune</label><br>
+
+                <input type="checkbox" id="checkbox5" onClick="filter4()">
+                <label for="checkbox5">Sunpure</label><br>
+
+                <input type="checkbox" id="checkbox6" onClick="filter5()">
+                <label for="checkbox6">Tata Sampann</label><br>
+
+                <input type="checkbox" id="checkbox7" onClick="filter6()">
+                <label for="checkbox7">BB Popular</label><br>
+
+                <input type="checkbox" id="checkbox7" onClick="filter7()">
+                <label for="checkbox7">Show all</label><br>
+                <hr>
+
+                <p>Price</p>
 
 
-foodgrain.forEach(function(el){
-    let grain=document.createElement("div")
+                <p>Sort By Price</p>
+                <Select id="sort" onchange="sort()">
+                    <option value="Choose">Choose</option>
+                    <option value="Low to high">Low to high</option>
+                    <option value="High to Low">High to Low</option>
+                </Select>
 
-    let image=document.createElement("img")
-    image.src=el.image
-    grain.append(image)
+            </div>
 
-    let company=document.createElement("p")
-    company.innerText=el.company
-    grain.append(company)
-
-    let pro=document.createElement("p")
-    pro.innerText=el.product
-    grain.append(pro)
-
-    let price=document.createElement("h4")
-    price.innerText=el.price
-    grain.append(price)
-
-    let btn=document.createElement("button")
-    btn.innerText="Add To Cart"
-    grain.append(btn)
-   
-
-    document.getElementById("abc").append(grain)
-
-})
-</script>
+            <div id="abc"></div>
 
 
 
+
+
+        </div>
+        <div style="width: 85%; margin: auto; color: rgb(112, 106, 106);">
+            <h2>Buy Fruits and Vegetables Online</h2>
+            <p>While fresh vegetables should be a part of your everyday meals, some vegetables are hard to find even in the huge supermarkets in your area. However, the luxury of online shopping offers customers the comfort of relishing these veggies by ordering them from the comfort of their home. While beetroot, amlas, green peas, broccoli can easily be found in the market, bigbasket makes grocery shopping easier for you with their fresh produce delivered in top class packages right at your doorstep. With their wide delivery network, geographical barriers are easily overcome in more than 25 major cities, thereby giving you the benefit of fresh fruits and vegetables every time.</p>
+        <p>Fruits and Vegetables <br>
+            Fruits and vegetables form the base of everybody’s daily food consumption. However, not everyone has access to fresh and healthy vegetables and fruits due to various reasons. Starting from farming methods that involve toxicants to storage systems and logistics, many sellers land up with rotten raw foods or foods exposed to chemicals and other radicals. Bigbasket has now turned the scene around with its online shopping store, where you can have fresh potato, tomato, carrots, onions and everything else on your grocery list, delivered to your doorstep, even without stepping out of your house. Apart from your regular local produce, you can also shop for other seasonal produces such as asparagus, broccoli, drumstick, white onion and more on bigbasket’s online store. Packaging plays a vital role in up keeping the freshness of your fruits and vegetables. Green leafy vegetables are prone to spoilage easily if not handled properly. While ordering online in bigbasket, worries about packaging and hygiene can be kept at bay. Be it your lettuce, cauliflower or any green vegetable, the packaging standard is specific and of high quality. You can find a whole wide range of vegetables such as red cabbage, drumstick leaves and different exotic ones as well on bigbasket. Apart from quality, we also believe in making fresh foods available to all and thus, you can find very nominal pricing while shopping online with us. Comapre the onion price or potato price with anywhere else in the market, and you will understand what we are talking about. Quality is uncompromised regardless of the type of delivery that you choose, standard or express. The produce delivered to you will be as fresh as directly cultivated from the farms resulting in high levels of nutrition. You no more have to walk through aisles of piled up produce and spend time carefully picking out each vegetable or fruit from them. We will take care of the entire process for you. We at bigbasket, cautiously pick your produce, meticulously clean them and pack them using the best packaging material available before delivering them to you. Shop for your vegetables and fruits online now from the comfort of your couch and have your order delivered to your doorstep within a stipulated time. Look out for great deals, offers and value packs while shopping online with us. Save time, money and efforts, by completing your routine grocery shopping on bigbasket.</p>
+        <p>Freshness- the promise of quality <br>
+            The freshness of the produce being delivered to you is unquestionable, even in the case of standard delivery. Veggies like banana stem and banana flower, which are used in exotic dishes, are fresh and readily available to buy online at bigbasket. Vegetables like mushrooms and sprouts, which are prone to quick spoilage are also packed with utmost care using the best materials. Variety of vegetables such as button mushrooms, raw banana and yellow zucchini are also available. With the demand for organic produce continuously rising, bigbasket has made them readily accessible. You can shop for organic bananas online on the site too. All these fruits and vegitables are brought from verified and reputed vendors, giving no room to worry about quality. Striving to sustain the nutritive benefits of the vegetables and fruits, bigbasket takes its packaging very seriously and abides by a very strict packing standard. With a whole lot of groceries to shop for and the luxury of at-home shopping, bigbasket brings convenience to your grocery shopping experience with regard to time, delivery, cost and quality. bigbasket offers a range of prominent products that are well received by customers. “Zespri” is one such well-known brand that is available to shop for online. For those looking out for organic products only, bigbasket stocks products by TVS Organic too. Make bigbasket your prime choice to buy fruits and vegetables online.</p>
+        </div>
+
+    </body>
+
+    </html>
+
+    <script>
+
+        let foodgrain = [
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/274120_4-sunpure-refined-sunflower-oil.jpg",
+                company: "Aashirvaad",
+                product: "Atta/Godihittu - Whole Wheat",
+                price: 463
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000404_18-bb-royal-rice-raw-sona-masoori-12-17-months-old.jpg",
+                company: "BB Royal",
+                product: "Rice/Akki - Raw, Sona Masoori, 12-17 Months Old",
+                price: 539
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/30005417_8-bb-popular-sugar.jpg",
+                company: "BB Popular",
+                product: "Sugar/Sakkare",
+                price: 226
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/40030808_10-bb-royal-cuminjeera-whole.jpg",
+                company: "BB Royal",
+                product: "Cumin/Jeera/Jeerige - Whole",
+                price: 353
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/40075897_12-bb-royal-sona-masoori-rice-raw-rice-super-premium.jpg",
+                company: "BB Royal",
+                product: "Sona Masoori Rice/Akki Raw Rice/Akki - Super Premium",
+                price: 575
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/213273_7-nandini-pure-ghee.jpg",
+                company: "Nandini",
+                product: "Pure Ghee/Tuppa",
+                price: 570
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/1204455_2-fortune-sunflower-refined-oil-sun-lite.jpg",
+                company: "Fortune",
+                product: "Sunflower Refined Oil - Sun Lite",
+                price: 459
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/274120_4-sunpure-refined-sunflower-oil.jpg",
+                company: "Sunpure",
+                product: "Refined - Sunflower Oil",
+                price: 156
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/40072494_12-bb-royal-organic-turtoor-dal.jpg",
+                company: "BB Royal",
+                product: "Organic - Toor Dal/Togari Bele",
+                price: 155
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/60000007_5-bb-popular-moong-dal.jpg",
+                company: "BB Royal",
+                product: "Moong Dal/Hesaru Bele",
+                price: 56.50
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000407_12-bb-royal-refined-sugar-sulphurless.jpg",
+                company: "BB Royal",
+                product: "Refined Sugar (Sulphurless)/Sakkare",
+                price: 239
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/40000291_8-tata-sampann-unpolished-toor-dalarhar-dal.jpg",
+                company: "Tata Sampann",
+                product: "Toor Dal/Togari Bele",
+                price: 150
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg",
+                company: "Tata Salt",
+                product: "Iodized",
+                price: 142
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/30010377_11-bb-popular-urad-dal-split.jpg",
+                company: "BB Popular",
+                product: "Urad Dal/Uddina Bele - Split",
+                price: 55.50
+            },
+            {
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000431_18-bb-royal-pohaavalakkiavalchivda-thick.jpg",
+                company: "BB Royal",
+                product: "Poha/Avalakki/Aval/Chivda Thick - Flattened & Beaten Rice , Makers Breakfast &  Teatime Snacks",
+                price: 60.82
+            },
+        ]
+
+
+        display(foodgrain)
+
+    //Display products
+    function display(res) {
+        document.getElementById("abc").innerHTML = ""
+
+        res.forEach(function (el) {
+            let product = document.createElement("div")
+
+            let image = document.createElement("img")
+            image.src = el.image
+            product.append(image)
+
+            let company = document.createElement("p")
+            company.innerText = el.company
+            product.append(company)
+
+            let pro = document.createElement("p")
+            pro.innerText = el.product
+            product.append(pro)
+
+            let price = document.createElement("h4")
+            price.innerText = el.price
+            product.append(price)
+
+            let btn = document.createElement("button")
+            btn.innerText = "Add To Cart"
+            product.append(btn)
+            btn.addEventListener("click", function () {
+                addtocart(el)
+            })
+
+            document.getElementById("abc").append(product)
+
+        })
+
+
+    }
+
+    //add to cart
+
+    let cart = JSON.parse(localStorage.getItem("cartitem")) || []
+    function addtocart(el) {
+        cart.push(el)
+        localStorage.setItem("cart_item", JSON.stringify(cart))
+    }
+
+
+    //Sort by price
+    function sort(a, b) {
+        let selected = document.querySelector("#sort").value
+        if (selected == "Low to high") {
+            foodgrain.sort(function (a, b) {
+                return a.price - b.price
+            })
+            display(foodgrain)
+        }
+
+        if (selected == "High to Low") {
+            foodgrain.sort(function (a, b) {
+                return b.price - a.price
+            })
+            display(foodgrain)
+        }
+        if (selected == "Choose") {
+            window.location.reload();
+        }
+    }
+
+
+
+    function filter() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "BB Royal"
+        })
+        display(res)
+    }
+    function filter1() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "Nandini"
+        })
+        display(res)
+    }
+    function filter2() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "Aashirvaad"
+        })
+        display(res)
+    }
+    function filter3() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "Fortune"
+        })
+        display(res)
+    }
+    function filter4() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "Sunpure"
+        })
+        display(res)
+    }
+    function filter5() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "Tata Sampann"
+        })
+        display(res)
+    }
+
+    function filter6() {
+        let res = foodgrain.filter(function (el) {
+            return el.company == "BB Popular"
+        })
+        display(res)
+
+    }
+    function filter7() {
+        window.location.reload()
+    }
+
+
+    </script>
